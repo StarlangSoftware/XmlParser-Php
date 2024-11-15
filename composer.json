@@ -1,0 +1,21 @@
+{
+  "name": "olcaytaner/xmlparser",
+  "version": "1.0.0",
+  "description": "Simple Xml Parser",
+  "type": "library",
+  "license": "GPL",
+  "autoload": {
+    "psr-4": {
+      "olcaytaner\\XmlParser\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "y"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "11.4.0"
+  }
+}
