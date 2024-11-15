@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple Xml Parser",
   "type": "library",
-  "license": "GPL",
+  "license": "GPL-3.0-or-later",
   "autoload": {
     "psr-4": {
       "olcaytaner\\XmlParser\\": "src/"
