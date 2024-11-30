@@ -1,7 +1,6 @@
 For Developers
 ============
-
-
+You can also see [C++](https://github.com/starlangsoftware/XmlParser-CPP), [C](https://github.com/starlangsoftware/XmlParser-C), [Js](https://github.com/starlangsoftware/XmlParser-Js), or [Java](https://github.com/starlangsoftware/XmlParser) repository.
 
 ## Requirements
 
@@ -40,3 +39,29 @@ Steps for opening the cloned project:
 * Choose `XmlParser-Php` file
 * Select open as project option
 * Couple of seconds, dependencies will be downloaded. 
+
+Detailed Description
+============
+
+In order to load an xml document, we use the constructor
+
+    $doc = new XmlDocument($fileName)
+    
+and parse with the parse method
+
+    $doc->parse()
+    
+Root node of the document can be obtained via the getFirstChild method:
+
+    $rootNode = $doc->getFirstChild()
+  
+For example, to iterate over the first level tags in the xml file one can use
+
+    $rootNode = $doc->getFirstChild()
+    $childNode = $rootNode->getFirstChild()
+    while ($childNode){
+      ...
+      $childNode = $childNode->getNextSibling()
+    }
+
+Tag name can be obtained via getName, pcData via getPcData methods.
