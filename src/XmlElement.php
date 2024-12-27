@@ -8,19 +8,21 @@ class XmlElement
     private string $pcData = "";
     private array $attributes;
     private ?XmlElement $parent;
-    private XmlElement $firstChild;
-    private XmlElement $nextSibling;
+    private ?XmlElement $firstChild;
+    private ?XmlElement $nextSibling;
 
     /**
      * Constructor for xml element. Allocates memory and initializes an element.
      * @param string $name Name of the element
-     * @param XmlElement $parent Parent of the Xml Element
+     * @param XmlElement|null $parent Parent of the Xml Element
      */
     function __construct(string $name, XmlElement $parent = NULL)
     {
         $this->name = $name;
         $this->parent = $parent;
         $this->attributes = [];
+        $this->firstChild = null;
+        $this->nextSibling = null;
     }
 
     public function getName(): string
@@ -33,12 +35,12 @@ class XmlElement
         return $this->pcData;
     }
 
-    public function getFirstChild(): XmlElement
+    public function getFirstChild(): ?XmlElement
     {
         return $this->firstChild;
     }
 
-    public function getNextSibling(): XmlElement
+    public function getNextSibling(): ?XmlElement
     {
         return $this->nextSibling;
     }
