@@ -1,7 +1,6 @@
 <?php
 
-namespace olcaytaner\XmlParser;
-
+use olcaytaner\XmlParser\XmlDocument;
 use PHPUnit\Framework\TestCase;
 
 class XmlDocumentTest extends TestCase
