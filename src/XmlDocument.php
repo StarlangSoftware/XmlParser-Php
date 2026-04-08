@@ -21,11 +21,14 @@ class XmlDocument
         $this->position = 0;
     }
 
-    private function readChar(): string
+    private function readChar(): ?string
     {
-        $ch = $this->data[$this->position];
-        $this->position++;
-        return $ch;
+        if ($this->position < strlen($this->data)) {
+            $ch = $this->data[$this->position];
+            $this->position++;
+            return $ch;
+        }
+        return null;
     }
 
     /**
